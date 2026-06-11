@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShortURL — free URL shortener with click analytics. Shorten long links, add custom aliases, and track every click.">
+  <title>ShortURL - URL Shortener</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="#home" class="logo">SHORTURL</a>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <a href="#" class="login-link">Log In</a>
+      <button type="button" class="signup-btn">Sign Up</button>
+      <button type="button" class="menu-toggle" aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <h1>URL Shortener, Short Links &amp; Analytics</h1>
+        <p class="hero-desc">The simplest way to shorten your long URLs. Built for speed, designed for sharing. Track every click with our built-in analytics.</p>
+        <p class="hero-desc">No signup needed — paste a link, get a short one back, and share it anywhere. Every link gets its own stats, so you always know how it performs.</p>
+        <div class="hero-buttons">
+          <a href="#features" class="btn-secondary">Learn More</a>
+          <a href="#shortenForm" class="btn-primary">Get Started</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card">
+          <div class="card-tabs">
+            <button type="button" class="tab tab-active">Shorten a Link</button>
+            <button type="button" class="tab">Generate QR Code</button>
+          </div>
+          <form class="card-body" id="shortenForm">
+            <label for="longUrl">Long URL <span class="required" aria-hidden="true">*</span></label>
+            <input type="url" id="longUrl" name="longUrl" placeholder="Paste long URL here" required>
+
+            <label for="alias">Custom Alias (optional)</label>
+            <input type="text" id="alias" name="alias" placeholder="Add alias here" minlength="5" aria-describedby="aliasHint">
+            <small class="hint" id="aliasHint">Must be at least 5 characters</small>
+
+            <button type="submit" id="shortenBtn" class="shorten-btn">Shorten Link</button>
+          </form>
+        </div>
+
+        <div class="result" id="resultSection" hidden>
+          <p>Your short URL:</p>
+          <a href="#" id="shortUrl" target="_blank" rel="noopener"></a>
+          <button type="button" id="copyBtn" class="copy-btn">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <h2 class="section-title">Why use ShortURL?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">⚡</div>
+          <h3>Lightning Fast</h3>
+          <p>Instant URL shortening with zero waiting time</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🔒</div>
+          <h3>Secure</h3>
+          <p>HTTPS by default, your links are always safe</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">💰</div>
+          <h3>Free Forever</h3>
+          <p>No hidden costs, no signup required</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📊</div>
+          <h3>Analytics</h3>
+          <p>Track every click and engagement metric</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+      <h2 class="section-title">How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Paste your URL</h3>
+          <p>Copy any long URL and paste it into the input box</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Click Shorten</h3>
+          <p>Our system generates a short, memorable link instantly</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Share anywhere</h3>
+          <p>Use your short URL on social media, emails, anywhere</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="section-title">About</h2>
+      <p class="about-text">ShortURL is built by Palash as a learning project to demonstrate full-stack web development skills — a hand-rolled frontend backed by an Express API, database storage, and click analytics.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>ShortURL</h4>
+        <p>The simplest way to shorten long URLs</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ShortURL by Palash. Built for learning.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
